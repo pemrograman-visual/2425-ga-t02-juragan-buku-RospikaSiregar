@@ -1,3 +1,4 @@
 kami telah menyelesaikan tugas praktikum kedua 
 Kadang lupa cara ngesubmit
 Kesusahan dalam mengerjakan tugas kali ini bisa kami atasi dengan bantuan asdos yang baik
+test compile
