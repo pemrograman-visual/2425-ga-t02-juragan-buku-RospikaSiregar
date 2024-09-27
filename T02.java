@@ -23,13 +23,13 @@ public class T02 {
         minimumMargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        if (rating >= 4.7) {
+        if (rating >= 4.7 && rating <= 5.0) {
             kategori = "Best Pick";
         } else {
-        if (rating >= 4.5) {
+            if (rating >= 4.5 && rating < 4.7) {
                 kategori = "Must Read";
             } else {
-                if (rating >= 4.0) {
+                if (rating >= 4.0 && rating < 4.5) {
                     kategori = "Recommended";
                 } else {
                     if (rating >= 3.0) {
@@ -40,6 +40,11 @@ public class T02 {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kategori);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
+    }
+    
+    private static String toFixed(double value, int digits) {
+        return String.format("%." + digits + "f", value);
     }
 }
+
